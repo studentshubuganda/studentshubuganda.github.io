@@ -1,278 +1,981 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Students Hub Uganda - Educational resources, revision notes, technology prices and opportunities for students in Uganda.">
-  <title>Students Hub Uganda | Learn, Grow, Succeed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta name="description" content="Students Hub Uganda provides educational resources, revision materials, subject guides, technology information and student opportunities.">
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #263238;
-      background: #f4f7fb;
-    }
+<meta name="theme-color" content="#102a43">
 
-    header {
-      background: #073b75;
-      color: white;
-      padding: 22px 16px;
-      text-align: center;
-    }
+<title>Students Hub Uganda | Learn Today, Lead Tomorrow</title>
 
-    header h1 {
-      font-size: 27px;
-      margin-bottom: 5px;
-    }
+<style>
+:root {
+  --navy: #102a43;
+  --blue: #174f86;
+  --green: #16804a;
+  --gold: #f3bd42;
+  --light: #f3f7fb;
+  --white: #ffffff;
+  --text: #25364a;
+  --muted: #607286;
+}
 
-    header p {
-      color: #e1edff;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    nav {
-      background: #052b55;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-      gap: 8px;
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 7px 10px;
-      font-size: 14px;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-    nav a:hover {
-      background: #1769aa;
-      border-radius: 5px;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #0755a0, #1284c7);
-      color: white;
-      text-align: center;
-      padding: 55px 20px;
-    }
+button, input {
+  font: inherit;
+}
 
-    .hero h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
 
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 22px;
-    }
+header {
+  background: var(--navy);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 12px #0002;
+}
 
-    .button {
-      display: inline-block;
-      background: #ffca28;
-      color: #172b4d;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+.navbar {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
 
-    .container {
-      max-width: 1050px;
-      margin: auto;
-      padding: 30px 16px;
-    }
+.brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
 
-    .section-title {
-      text-align: center;
-      color: #073b75;
-      margin-bottom: 22px;
-      font-size: 26px;
-    }
+.brand span {
+  display: block;
+  color: var(--gold);
+  font-size: .75rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 23px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-    }
+nav a {
+  font-size: .88rem;
+  color: #fff;
+  padding: 5px 0;
+}
 
-    .card .icon {
-      font-size: 35px;
-      margin-bottom: 8px;
-    }
+nav a:hover {
+  color: var(--gold);
+}
 
-    .card h3 {
-      color: #0755a0;
-      margin-bottom: 8px;
-    }
+.hero {
+  background: linear-gradient(125deg, #102a43, #174f86 72%, #16804a);
+  color: white;
+  padding: 85px 0 90px;
+}
 
-    .card p {
-      margin-bottom: 15px;
-    }
+.hero-content {
+  max-width: 780px;
+}
 
-    .card a {
-      color: #0755a0;
-      font-weight: bold;
-      text-decoration: none;
-    }
+.eyebrow {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
 
-    .welcome {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 25px;
-    }
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.12;
+  margin-bottom: 22px;
+}
 
-    .welcome h2 {
-      color: #073b75;
-      margin-bottom: 10px;
-    }
+.hero p {
+  max-width: 680px;
+  font-size: 1.08rem;
+  color: #e4edf5;
+  margin-bottom: 28px;
+}
 
-    footer {
-      background: #052b55;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 25px;
-    }
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
-    footer a {
-      color: #ffca28;
-      text-decoration: none;
-    }
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-weight: 700;
+  transition: .2s;
+}
 
-    @media (max-width: 480px) {
-      .hero h2 {
-        font-size: 26px;
-      }
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-      header h1 {
-        font-size: 23px;
-      }
-    }
-  </style>
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn-outline {
+  border: 1px solid white;
+  color: white;
+}
+
+section {
+  padding: 65px 0;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  color: var(--navy);
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.stats {
+  background: white;
+  padding: 25px 0;
+  border-bottom: 1px solid #e3eaf1;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  color: var(--green);
+  font-size: 1.1rem;
+}
+
+.stat span {
+  font-size: .88rem;
+  color: var(--muted);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e4ebf2;
+  border-radius: 12px;
+  padding: 23px;
+  box-shadow: 0 4px 15px #102a4308;
+}
+
+.card:hover {
+  box-shadow: 0 9px 25px #102a4315;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: var(--navy);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: .94rem;
+  margin-bottom: 14px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 9px;
+  background: #e8f5ed;
+  color: #17683d;
+  border-radius: 20px;
+  font-size: .76rem;
+  margin: 3px 3px 3px 0;
+}
+
+.card-link {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.subject-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.subject-tools input {
+  flex: 1 1 240px;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #cbd7e2;
+  border-radius: 8px;
+  background: white;
+}
+
+.filter-btn {
+  border: 1px solid #cbd7e2;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--navy);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--navy);
+  color: white;
+}
+
+.subject-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subject {
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 7px;
+  padding: 9px 13px;
+  font-size: .9rem;
+}
+
+.subject small {
+  display: block;
+  color: var(--muted);
+  font-size: .74rem;
+}
+
+.notice {
+  background: #fff8e6;
+  border-left: 4px solid var(--gold);
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 22px;
+  color: #624d1b;
+  font-size: .92rem;
+}
+
+.feature-section {
+  background: white;
+}
+
+.opportunity-box {
+  background: var(--navy);
+  color: white;
+  padding: 35px;
+  border-radius: 14px;
+}
+
+.opportunity-box h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.opportunity-box p {
+  color: #e0e9f2;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.about-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e4ebf2;
+}
+
+.about-panel h3 {
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.about-panel p {
+  color: var(--muted);
+}
+
+footer {
+  background: #0b1f33;
+  color: white;
+  padding: 38px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+footer h3,
+footer h4 {
+  margin-bottom: 12px;
+  color: var(--gold);
+}
+
+footer p,
+footer a {
+  color: #d6e1eb;
+  font-size: .9rem;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.footer-links {
+  display: grid;
+  gap: 7px;
+}
+
+.copyright {
+  border-top: 1px solid #ffffff25;
+  padding-top: 18px;
+  text-align: center;
+  color: #c4d0dc;
+  font-size: .83rem;
+}
+
+@media (max-width: 800px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 8px 14px;
+  }
+
+  nav a {
+    font-size: .82rem;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunity-box {
+    padding: 24px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🎓 Students Hub Uganda</h1>
-    <p>Your partner in learning, technology and success.</p>
-  </header>
+<header>
+  <div class="container navbar">
+    <a class="brand" href="#home">
+      🎓 Students Hub Uganda
+      <span>Learn Today. Lead Tomorrow.</span>
+    </a>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#education">Education</a>
-    <a href="#technology">Technology</a>
-    <a href="#opportunities">Opportunities</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#education">Education</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#technology">Technology</a>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero" id="home">
-    <h2>Learn Today. Lead Tomorrow.</h2>
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <span class="eyebrow">YOUR LEARNING JOURNEY STARTS HERE</span>
+
+    <h1>Learn Today.<br>Lead Tomorrow.</h1>
+
     <p>
-      Welcome to Students Hub Uganda, a platform dedicated to
-      helping Ugandan students access educational resources,
-      technology information and opportunities for growth.
+      Welcome to Students Hub Uganda — a growing platform
+      for students seeking educational resources, revision
+      guidance, technology information and opportunities
+      to build a brighter future.
     </p>
-    <a class="button" href="#education">Explore Resources</a>
-  </section>
 
-  <main class="container">
+    <div class="buttons">
+      <a class="btn btn-gold" href="#education">Explore Education →</a>
+      <a class="btn btn-outline" href="#subjects">Discover Subjects</a>
+    </div>
+  </div>
+</section>
 
-    <h2 class="section-title">Explore Students Hub</h2>
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <strong>📚 Every Subject</strong>
+      <span>Explore Arts, Sciences and Business</span>
+    </div>
 
-    <div class="cards">
+    <div class="stat">
+      <strong>🇺🇬 Uganda First</strong>
+      <span>Resources for Ugandan learners</span>
+    </div>
 
-      <article class="card" id="education">
-        <div class="icon">📚</div>
-        <h3>Education & Revision</h3>
+    <div class="stat">
+      <strong>🚀 A Brighter Future</strong>
+      <span>Knowledge, skills and opportunities</span>
+    </div>
+  </div>
+</div>
+
+<section id="education">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Explore Students Hub</h2>
+      <p>
+        Discover learning resources, subject guides and
+        practical information to support your education.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-icon">📚</div>
+        <h3>Arts & Humanities</h3>
         <p>
-          Discover study guides, revision notes and learning
-          resources to support your academic journey.
+          Explore History, Geography, Literature, Religious
+          Education and other humanities subjects.
         </p>
-        <a href="#contact">Explore Education →</a>
+        <a class="card-link" href="#arts">Explore Arts →</a>
       </article>
 
       <article class="card">
-        <div class="icon">📝</div>
-        <h3>Exam Preparation</h3>
+        <div class="card-icon">🔬</div>
+        <h3>Sciences & Mathematics</h3>
         <p>
-          Prepare for examinations with organised learning
-          materials and useful study advice.
+          Build your understanding of Biology, Chemistry,
+          Physics, Mathematics and applied sciences.
         </p>
-        <a href="#contact">Study Better →</a>
+        <a class="card-link" href="#sciences">Explore Sciences →</a>
       </article>
 
-      <article class="card" id="technology">
-        <div class="icon">📱</div>
-        <h3>Phones & Laptops</h3>
+      <article class="card">
+        <div class="card-icon">💼</div>
+        <h3>Business & Commerce</h3>
         <p>
-          Find helpful information about phones, laptops,
-          specifications and technology prices in Uganda.
+          Learn about Entrepreneurship, Economics,
+          Accounting, Commerce and business skills.
         </p>
-        <a href="#contact">Explore Technology →</a>
+        <a class="card-link" href="#business">Explore Business →</a>
       </article>
 
-      <article class="card" id="opportunities">
-        <div class="icon">🚀</div>
-        <h3>Student Opportunities</h3>
+      <article class="card">
+        <div class="card-icon">🌍</div>
+        <h3>Languages</h3>
         <p>
-          Learn about skills, scholarships, career development
-          and opportunities that can help students grow.
+          Improve communication, grammar, reading,
+          writing and language-learning skills.
         </p>
-        <a href="#contact">Discover Opportunities →</a>
+        <a class="card-link" href="#languages">Explore Languages →</a>
       </article>
 
+      <article class="card">
+        <div class="card-icon">📝</div>
+        <h3>Revision & Examination Prep</h3>
+        <p>
+          Prepare with practice questions, revision plans,
+          study techniques and examination guidance.
+        </p>
+        <a class="card-link" href="#revision">Study Better →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">💻</div>
+        <h3>ICT & Technology</h3>
+        <p>
+          Discover computer studies, digital skills,
+          device specifications and technology advice.
+        </p>
+        <a class="card-link" href="#technology">Explore Technology →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="subjects" class="feature-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Find Your Subject</h2>
+      <p>
+        Search our subject directory. Use the category
+        buttons to find subjects relevant to your studies.
+      </p>
     </div>
 
-    <section class="welcome" id="about">
+    <div class="subject-tools">
+      <input
+        id="subjectSearch"
+        type="search"
+        placeholder="Search a subject, e.g. History..."
+        aria-label="Search subjects"
+      >
+
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="arts">Arts</button>
+      <button class="filter-btn" data-filter="science">Sciences</button>
+      <button class="filter-btn" data-filter="business">Business</button>
+      <button class="filter-btn" data-filter="languages">Languages</button>
+      <button class="filter-btn" data-filter="technology">Technology</button>
+    </div>
+
+    <div id="arts">
+      <h3 style="color:#102a43; margin-bottom:15px;">📜 Arts & Humanities</h3>
+      <div class="subject-list">
+        <div class="subject" data-category="arts">History<small>Arts & Humanities</small></div>
+        <div class="subject" data-category="arts">Geography<small>Arts & Humanities</small></div>
+        <div class="subject" data-category="arts">Literature in English<small>Arts & Humanities</small></div>
+        <div class="subject" data-category="arts">Christian Religious Education<small>Religious Education</small></div>
+        <div class="subject" data-category="arts">Islamic Religious Education<small>Religious Education</small></div>
+        <div class="subject" data-category="arts">Divinity<small>Where offered</small></div>
+        <div class="subject" data-category="arts">Political Education<small>Social studies</small></div>
+        <div class="subject" data-category="arts">Social Studies<small>Humanities</small></div>
+        <div class="subject" data-category="arts">Cultural Studies<small>Humanities</small></div>
+      </div>
+    </div>
+
+    <div id="sciences" style="margin-top:30px;">
+      <h3 style="color:#102a43; margin-bottom:15px;">🔬 Sciences & Mathematics</h3>
+      <div class="subject-list">
+        <div class="subject" data-category="science">Biology<small>Science</small></div>
+        <div class="subject" data-category="science">Chemistry<small>Science</small></div>
+        <div class="subject" data-category="science">Physics<small>Science</small></div>
+        <div class="subject" data-category="science">Mathematics<small>Mathematics</small></div>
+        <div class="subject" data-category="science">Agriculture<small>Applied science</small></div>
+        <div class="subject" data-category="science">Agricultural Science<small>Where offered</small></div>
+        <div class="subject" data-category="science">Nutrition and Food Science<small>Applied science</small></div>
+        <div class="subject" data-category="science">Environmental Science<small>Applied science</small></div>
+        <div class="subject" data-category="science">Additional Mathematics<small>Where offered</small></div>
+      </div>
+    </div>
+
+    <div id="business" style="margin-top:30px;">
+      <h3 style="color:#102a43; margin-bottom:15px;">💼 Business & Commerce</h3>
+      <div class="subject-list">
+        <div class="subject" data-category="business">Entrepreneurship<small>Business</small></div>
+        <div class="subject" data-category="business">Economics<small>Business & Economics</small></div>
+        <div class="subject" data-category="business">Accounting<small>Business</small></div>
+        <div class="subject" data-category="business">Commerce<small>Business</small></div>
+        <div class="subject" data-category="business">Business Studies<small>Business</small></div>
+        <div class="subject" data-category="business">Financial Literacy<small>Practical skills</small></div>
+      </div>
+    </div>
+
+    <div id="languages" style="margin-top:30px;">
+      <h3 style="color:#102a43; margin-bottom:15px;">🗣️ Languages</h3>
+      <div class="subject-list">
+        <div class="subject" data-category="languages">English Language<small>Languages</small></div>
+        <div class="subject" data-category="languages">Kiswahili<small>Languages</small></div>
+        <div class="subject" data-category="languages">French<small>Where offered</small></div>
+        <div class="subject" data-category="languages">German<small>Where offered</small></div>
+        <div class="subject" data-category="languages">Chinese<small>Where offered</small></div>
+        <div class="subject" data-category="languages">Ugandan Local Languages<small>Language learning</small></div>
+      </div>
+    </div>
+
+    <div style="margin-top:30px;">
+      <h3 style="color:#102a43; margin-bottom:15px;">🛠️ Technical & Practical Subjects</h3>
+      <div class="subject-list">
+        <div class="subject" data-category="technology">ICT<small>Technology</small></div>
+        <div class="subject" data-category="technology">Computer Studies<small>Technology</small></div>
+        <div class="subject" data-category="technology">Technical Drawing<small>Technical</small></div>
+        <div class="subject" data-category="technology">Fine Art<small>Creative arts</small></div>
+        <div class="subject" data-category="technology">Music<small>Creative arts</small></div>
+        <div class="subject" data-category="technology">Physical Education<small>Practical</small></div>
+        <div class="subject" data-category="technology">Design & Technology<small>Where offered</small></div>
+        <div class="subject" data-category="technology">Home Economics<small>Where offered</small></div>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>Important:</strong> This is a growing subject directory,
+      not a complete official list of every subject offered in Uganda.
+      Subject availability varies by school, level and curriculum.
+      We will continue expanding the directory and adding actual
+      learning materials.
+    </div>
+  </div>
+</section>
+
+<section id="revision">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Revision & Examination Preparation</h2>
+      <p>
+        Develop effective study habits and prepare for your
+        examinations with a clear learning plan.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-icon">📖</div>
+        <h3>Revision Notes</h3>
+        <p>
+          We are building organised notes and explanations
+          across Arts, Sciences and Business subjects.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">✍️</div>
+        <h3>Practice Questions</h3>
+        <p>
+          Practise answering questions, explaining concepts
+          and applying what you learn.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">⏰</div>
+        <h3>Study Skills</h3>
+        <p>
+          Learn how to manage time, make revision timetables,
+          remember information and prepare for examinations.
+        </p>
+      </article>
+    </div>
+
+    <div class="notice">
+      This section is being developed. We will add actual
+      subject notes, worked examples and practice materials
+      progressively.
+    </div>
+  </div>
+</section>
+
+<section id="technology" class="feature-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Technology for Students</h2>
+      <p>
+        Make informed technology decisions with information
+        relevant to students in Uganda.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-icon">📱</div>
+        <h3>Phones</h3>
+        <p>
+          Explore smartphone specifications, storage,
+          battery life and features to consider before buying.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">💻</div>
+        <h3>Laptops</h3>
+        <p>
+          Learn about RAM, processors, storage and suitable
+          laptops for studying, programming and business.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">💡</div>
+        <h3>Buying Guides</h3>
+        <p>
+          Understand device specifications, compare options
+          and learn how to choose technology on a budget.
+        </p>
+      </article>
+    </div>
+
+    <div class="notice">
+      Device prices and availability will be added as we
+      research them. Prices should include a date and
+      location where possible because they change over time.
+    </div>
+  </div>
+</section>
+
+<section id="opportunities">
+  <div class="container">
+    <div class="opportunity-box">
+      <span class="eyebrow">YOUR FUTURE MATTERS</span>
+      <h2>Discover Opportunities</h2>
+      <p>
+        Education goes beyond the classroom. Students Hub
+        Uganda will help learners discover scholarship
+        information, career paths, practical skills and
+        opportunities for personal development.
+      </p>
+      <a class="btn btn-gold" href="#contact">Ask About Opportunities →</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="feature-section">
+  <div class="container">
+    <div class="section-heading">
       <h2>About Students Hub Uganda</h2>
       <p>
-        Students Hub Uganda aims to make useful educational
-        information, technology knowledge and student opportunities
-        easier to discover. Our goal is to encourage learning,
-        practical skills, creativity and responsible leadership
-        among students.
+        A student-focused platform built around knowledge,
+        opportunity and responsible leadership.
       </p>
-    </section>
+    </div>
 
-    <section class="welcome" id="contact">
+    <div class="about-grid">
+      <div>
+        <p>
+          Students Hub Uganda aims to make educational
+          information, subject guidance, technology knowledge
+          and student opportunities easier to discover.
+        </p>
+
+        <br>
+
+        <p>
+          Our vision is to encourage students to learn
+          independently, develop practical skills, think
+          critically and prepare for future responsibilities.
+        </p>
+
+        <br>
+
+        <p>
+          We intend to grow by adding useful learning
+          materials and accurate information for students
+          across Uganda and beyond.
+        </p>
+      </div>
+
+      <div class="about-panel">
+        <h3>Our Core Values</h3>
+        <p>📚 Knowledge and continuous learning</p>
+        <p>🤝 Integrity and responsibility</p>
+        <p>💡 Creativity and innovation</p>
+        <p>🌍 Opportunity and inclusion</p>
+        <p>🇺🇬 Service to our community</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-heading">
       <h2>Get in Touch</h2>
       <p>
-        Have a question, suggestion or educational resource to share?
-        Contact the Students Hub Uganda team.
+        Have a question, correction, suggestion or learning
+        resource to share? We welcome contributions.
       </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">✉️</div>
+      <h3>Contact Students Hub Uganda</h3>
+
       <p>
-        Email:
-        <a href="mailto:studentshubuganda@gmail.com">
+        Email us with your questions, suggestions or ideas
+        for improving the platform.
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <a class="card-link"
+           href="mailto:studentshubuganda@gmail.com">
           studentshubuganda@gmail.com
         </a>
       </p>
-    </section>
 
-  </main>
+      <br>
 
-  <footer>
-    <p><strong>Students Hub Uganda</strong></p>
-    <p>Empowering students through knowledge and opportunity.</p>
-    <p>&copy; 2026 Students Hub Uganda. All rights reserved.</p>
-  </footer>
+      <a class="btn btn-gold"
+         href="mailto:studentshubuganda@gmail.com?subject=Students%20Hub%20Uganda">
+        Send Us an Email →
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>🎓 Students Hub Uganda</h3>
+        <p>Empowering students through knowledge and opportunity.</p>
+        <p>Learn Today. Lead Tomorrow.</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="#education">Education</a>
+          <a href="#subjects">Subject Directory</a>
+          <a href="#revision">Revision Centre</a>
+          <a href="#technology">Technology</a>
+          <a href="#opportunities">Opportunities</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="#about">About Us</a>
+          <a href="mailto:studentshubuganda@gmail.com">
+            Email Students Hub Uganda
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> Students Hub Uganda.
+      All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+const searchInput = document.getElementById("subjectSearch");
+const subjects = document.querySelectorAll(".subject");
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+let activeFilter = "all";
+
+function filterSubjects() {
+  const query = searchInput.value.toLowerCase().trim();
+
+  subjects.forEach(function(subject) {
+    const matchesText =
+      subject.textContent.toLowerCase().includes(query);
+
+    const matchesCategory =
+      activeFilter === "all" ||
+      subject.dataset.category === activeFilter;
+
+    subject.style.display =
+      matchesText && matchesCategory ? "" : "none";
+  });
+}
+
+searchInput.addEventListener("input", filterSubjects);
+
+filterButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    activeFilter = button.dataset.filter;
+
+    filterButtons.forEach(function(item) {
+      item.classList.remove("active");
+    });
+
+    button.classList.add("active");
+    filterSubjects();
+  });
+});
+</script>
 
 </body>
 </html>
