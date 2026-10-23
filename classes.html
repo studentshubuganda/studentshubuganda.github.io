@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Your Class | Students Hub Uganda</title>
+  <meta name="description" content="Choose your secondary school class to explore study notes and revision resources on Students Hub Uganda.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #102b52;
+      color: white;
+      padding: 24px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 27px;
+    }
+
+    header p {
+      margin: 0;
+      color: #e1e9f5;
+    }
+
+    nav {
+      background: #174477;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 10px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .intro h2 {
+      color: #102b52;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .intro p {
+      color: #536176;
+    }
+
+    .level-title {
+      color: #174477;
+      margin: 30px 0 15px;
+      border-bottom: 2px solid #dce5f0;
+      padding-bottom: 8px;
+    }
+
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    }
+
+    .class-card {
+      background: white;
+      padding: 22px 12px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #dce5f0;
+      box-shadow: 0 3px 10px rgba(16, 43, 82, 0.06);
+    }
+
+    .class-card h3 {
+      color: #174477;
+      font-size: 23px;
+      margin: 0 0 8px;
+    }
+
+    .class-card p {
+      font-size: 14px;
+      color: #536176;
+      margin: 0 0 15px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #168454;
+      color: white;
+      padding: 9px 15px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #106940;
+    }
+
+    .notice {
+      margin-top: 30px;
+      background: #fff7df;
+      border-left: 5px solid #d5a126;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    footer {
+      margin-top: 45px;
+      background: #102b52;
+      color: white;
+      text-align: center;
+      padding: 22px 12px;
+    }
+
+    footer a {
+      color: #f5d77e;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      .intro h2 {
+        font-size: 24px;
+      }
+
+      .class-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Students Hub Uganda</h1>
+    <p>Learn Today. Lead Tomorrow.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="classes.html">Select Class</a>
+    <a href="index.html#subjects">Subjects</a>
+    <a href="index.html#opportunities">Opportunities</a>
+  </nav>
+
+  <main>
+
+    <section class="intro">
+      <h2>Choose Your Class</h2>
+      <p>Select your current class to begin exploring educational resources.</p>
+    </section>
+
+    <h2 class="level-title">Lower Secondary</h2>
+
+    <section class="class-grid">
+
+      <article class="class-card">
+        <h3>S.1</h3>
+        <p>Senior One learning resources.</p>
+        <a class="button" href="s1.html">Explore S.1</a>
+      </article>
+
+      <article class="class-card">
+        <h3>S.2</h3>
+        <p>Senior Two learning resources.</p>
+        <a class="button" href="s2.html">Explore S.2</a>
+      </article>
+
+      <article class="class-card">
+        <h3>S.3</h3>
+        <p>Senior Three learning resources.</p>
+        <a class="button" href="s3.html">Explore S.3</a>
+      </article>
+
+      <article class="class-card">
+        <h3>S.4</h3>
+        <p>Senior Four learning resources.</p>
+        <a class="button" href="s4.html">Explore S.4</a>
+      </article>
+
+    </section>
+
+    <h2 class="level-title">Advanced Secondary</h2>
+
+    <section class="class-grid">
+
+      <article class="class-card">
+        <h3>S.5</h3>
+        <p>Advanced Level learning resources.</p>
+        <a class="button" href="s5.html">Explore S.5</a>
+      </article>
+
+      <article class="class-card">
+        <h3>S.6</h3>
+        <p>Advanced Level revision resources.</p>
+        <a class="button" href="s6.html">Explore S.6</a>
+      </article>
+
+    </section>
+
+    <section class="notice">
+      <strong>Our learning mission</strong>
+      <p>Students Hub Uganda aims to make learning resources easier to access. We will continue adding class-specific notes, explanations, exercises, and revision questions as the platform develops.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Students Hub Uganda</p>
+    <p>Supporting students through knowledge and opportunity.</p>
+    <p><a href="mailto:studentshubuganda@gmail.com">Contact Us</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
